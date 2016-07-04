@@ -36,6 +36,8 @@ Then, in a console execute:
 
 		git clone git@github.com:jay3126/toy_robot_simulator.git
 		cd toy_robot_simulator
+		create a gemset called 'toy_simulator' using command - rvm gemset create toy_simulator
+		rvm gemset use toy_simulator
 		gem install bundler
 		bundle install
 
@@ -134,11 +136,11 @@ Expected output
 
 To run the feature specs, ensuring the robot behaves as expected, run:
 
-		bundle exec rake features
+		rake features
 
 The run the unit tests, ensuring each part of the application is behaving as expected, run:
 
-		bundle exec rake
+		rake
 
 You can check the code coverage afterwards by opening the generated report
 
