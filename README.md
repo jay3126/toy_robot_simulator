@@ -34,10 +34,10 @@ Ensure you have [Git](http://git-scm.com/downloads) and [Ruby 2.3.1](http://www.
 
 Then, in a console execute:
 
-    git clone git@github.com:jay3126/toy_robot_simulator.git
-    cd toy_robot_simulator
-    gem install bundler
-    bundle install
+		git clone git@github.com:jay3126/toy_robot_simulator.git
+		cd toy_robot_simulator
+		gem install bundler
+		bundle install
 
 ### Constraints:
 The toy robot must not fall off the table during movement. This also includes the initial
@@ -50,6 +50,8 @@ Any move that would cause the robot to fall must be ignored.
 
 		NOTE: If the following command does not work or throws error, run the command:
 		chmod +x bin/toy_robot_simulator.rb
+
+		Also, if you want to cancel the execution of the simulator program, then type quit and the program will exit.
 
 ### Example a
 
@@ -75,6 +77,13 @@ Expected output:
 
 		3,3,NORTH
 
+### Example d
+
+		./bin/toy_robot_simulator.rb instructions/instructions_4.txt
+
+Expected output
+
+		2,4,NORTH
 
 ### For manual Input:
 
@@ -111,19 +120,29 @@ Expected output
 
 		3,3,NORTH
 
+### Example d
+
+		PLACE 2,4,NORTH
+		MOVE
+		REPORT
+
+Expected output
+
+		2,4,NORTH
+
 ## Testing
 
 To run the feature specs, ensuring the robot behaves as expected, run:
 
-    bundle exec rake features
+		bundle exec rake features
 
 The run the unit tests, ensuring each part of the application is behaving as expected, run:
 
-    bundle exec rake
+		bundle exec rake
 
 You can check the code coverage afterwards by opening the generated report
 
-    open coverage/index.html
+		open coverage/index.html
 
 ### Deliverables:
 The Ruby source files, the test data and any test code.

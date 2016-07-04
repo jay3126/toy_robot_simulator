@@ -22,6 +22,8 @@ class CommandFactory
 			TurnCommand.new(@robot, TurnCommand::RIGHT)
 		elsif instruction == 'REPORT'
 			ReportCommand.new(@robot, @io)
+		elsif instruction.downcase == 'quit'
+			exit
 		else
 			UnknownCommand.new(instruction, @io)
 		end
